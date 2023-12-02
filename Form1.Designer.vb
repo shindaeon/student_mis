@@ -73,6 +73,7 @@ Partial Class Form1
         '
         'cmdCancel
         '
+        Me.cmdCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.cmdCancel.Location = New System.Drawing.Point(289, 139)
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(82, 30)
@@ -82,8 +83,10 @@ Partial Class Form1
         '
         'Form1
         '
+        Me.AcceptButton = Me.cmdLogIn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.cmdCancel
         Me.ClientSize = New System.Drawing.Size(430, 226)
         Me.Controls.Add(Me.cmdCancel)
         Me.Controls.Add(Me.cmdLogIn)
@@ -97,7 +100,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
