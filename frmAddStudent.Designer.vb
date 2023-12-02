@@ -37,7 +37,7 @@ Partial Class frmAddStudent
         'lbID
         '
         Me.lbID.AutoSize = True
-        Me.lbID.Location = New System.Drawing.Point(21, 88)
+        Me.lbID.Location = New System.Drawing.Point(19, 34)
         Me.lbID.Name = "lbID"
         Me.lbID.Size = New System.Drawing.Size(74, 20)
         Me.lbID.TabIndex = 0
@@ -46,7 +46,7 @@ Partial Class frmAddStudent
         'lbName
         '
         Me.lbName.AutoSize = True
-        Me.lbName.Location = New System.Drawing.Point(48, 124)
+        Me.lbName.Location = New System.Drawing.Point(46, 70)
         Me.lbName.Name = "lbName"
         Me.lbName.Size = New System.Drawing.Size(48, 20)
         Me.lbName.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class frmAddStudent
         'lbCollege
         '
         Me.lbCollege.AutoSize = True
-        Me.lbCollege.Location = New System.Drawing.Point(35, 157)
+        Me.lbCollege.Location = New System.Drawing.Point(33, 103)
         Me.lbCollege.Name = "lbCollege"
         Me.lbCollege.Size = New System.Drawing.Size(60, 20)
         Me.lbCollege.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class frmAddStudent
         'lbCourse
         '
         Me.lbCourse.AutoSize = True
-        Me.lbCourse.Location = New System.Drawing.Point(39, 189)
+        Me.lbCourse.Location = New System.Drawing.Point(37, 135)
         Me.lbCourse.Name = "lbCourse"
         Me.lbCourse.Size = New System.Drawing.Size(56, 20)
         Me.lbCourse.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class frmAddStudent
         Me.cboCollege.BackColor = System.Drawing.SystemColors.Window
         Me.cboCollege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCollege.FormattingEnabled = True
-        Me.cboCollege.Location = New System.Drawing.Point(101, 154)
+        Me.cboCollege.Location = New System.Drawing.Point(99, 100)
         Me.cboCollege.Name = "cboCollege"
         Me.cboCollege.Size = New System.Drawing.Size(293, 28)
         Me.cboCollege.TabIndex = 4
@@ -84,28 +84,28 @@ Partial Class frmAddStudent
         '
         Me.cboCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCourse.FormattingEnabled = True
-        Me.cboCourse.Location = New System.Drawing.Point(101, 186)
+        Me.cboCourse.Location = New System.Drawing.Point(99, 132)
         Me.cboCourse.Name = "cboCourse"
         Me.cboCourse.Size = New System.Drawing.Size(293, 28)
         Me.cboCourse.TabIndex = 5
         '
         'txtID
         '
-        Me.txtID.Location = New System.Drawing.Point(101, 85)
+        Me.txtID.Location = New System.Drawing.Point(99, 31)
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(293, 26)
         Me.txtID.TabIndex = 6
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(102, 121)
+        Me.txtName.Location = New System.Drawing.Point(100, 67)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(292, 26)
         Me.txtName.TabIndex = 7
         '
         'cmdSubmit
         '
-        Me.cmdSubmit.Location = New System.Drawing.Point(238, 246)
+        Me.cmdSubmit.Location = New System.Drawing.Point(236, 192)
         Me.cmdSubmit.Name = "cmdSubmit"
         Me.cmdSubmit.Size = New System.Drawing.Size(75, 34)
         Me.cmdSubmit.TabIndex = 8
@@ -114,7 +114,7 @@ Partial Class frmAddStudent
         '
         'cmdCancel
         '
-        Me.cmdCancel.Location = New System.Drawing.Point(319, 246)
+        Me.cmdCancel.Location = New System.Drawing.Point(317, 192)
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(75, 34)
         Me.cmdCancel.TabIndex = 9
@@ -125,7 +125,7 @@ Partial Class frmAddStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 292)
+        Me.ClientSize = New System.Drawing.Size(414, 245)
         Me.Controls.Add(Me.cmdCancel)
         Me.Controls.Add(Me.cmdSubmit)
         Me.Controls.Add(Me.txtName)
