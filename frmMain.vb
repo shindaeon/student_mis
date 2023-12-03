@@ -28,6 +28,33 @@ Public Class frmMain
         DBClose()
     End Sub
 
+    Public Sub loadSearchData()
+        Dim dt As New DataTable
+        DBConnect()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "SELECT * FROM tblstudent WHERE student_id LIKE'%" &
+                txtSearch.Text & "%' OR name LIKE'%" &
+                txtSearch.Text & "%' OR college LIKE'%" &
+                txtSearch.Text & "%' OR course LIKE'%" & txtSearch.Text & "%';"
+        cmd.ExecuteNonQuery()
+
+        da = New MySqlDataAdapter(cmd)
+        dt.Clear()
+
+        da.Fill(dt)
+
+        DataGridView1.DataSource = dt
+        DataGridView1.Refresh()
+
+        'hide the id of the student to the screen
+        DataGridView1.Columns.Item(0).Visible = False
+
+        cmd.Parameters.Clear()
+        cmd.Dispose()
+        da.Dispose()
+        DBClose()
+    End Sub
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmd.Dispose()
         DBClose()
@@ -145,5 +172,13 @@ Public Class frmMain
             MsgBox(ex.ToString)
         End Try
         loadData()
+    End Sub
+
+    Private Sub cmdSearch_Click(sender As Object, e As EventArgs) Handles cmdSearch.Click
+        Try
+            loadSearchData()
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
     End Sub
 End Class

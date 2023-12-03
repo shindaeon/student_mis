@@ -33,7 +33,7 @@ Partial Class frmMain
         Me.cmdDelete = New System.Windows.Forms.Button()
         Me.cmdExit = New System.Windows.Forms.Button()
         Me.cmdPrint = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.cmdSearch = New System.Windows.Forms.Button()
@@ -136,12 +136,12 @@ Partial Class frmMain
         Me.cmdPrint.Text = "Print"
         Me.cmdPrint.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtSearch
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 11)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(243, 26)
-        Me.TextBox1.TabIndex = 6
+        Me.txtSearch.Location = New System.Drawing.Point(12, 11)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(243, 26)
+        Me.txtSearch.TabIndex = 6
         '
         'PrintPreviewDialog1
         '
@@ -171,7 +171,7 @@ Partial Class frmMain
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(706, 441)
         Me.Controls.Add(Me.cmdSearch)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.cmdPrint)
         Me.Controls.Add(Me.cmdExit)
         Me.Controls.Add(Me.cmdDelete)
@@ -195,7 +195,7 @@ Partial Class frmMain
     Friend WithEvents cmdDelete As Button
     Friend WithEvents cmdExit As Button
     Friend WithEvents cmdPrint As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents cmdSearch As Button
