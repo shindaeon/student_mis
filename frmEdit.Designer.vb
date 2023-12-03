@@ -104,6 +104,7 @@ Partial Class frmEdit
         '
         'cboEditCollege
         '
+        Me.cboEditCollege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEditCollege.FormattingEnabled = True
         Me.cboEditCollege.Location = New System.Drawing.Point(104, 101)
         Me.cboEditCollege.Name = "cboEditCollege"
@@ -112,6 +113,7 @@ Partial Class frmEdit
         '
         'cboEditCourse
         '
+        Me.cboEditCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEditCourse.FormattingEnabled = True
         Me.cboEditCourse.Location = New System.Drawing.Point(104, 132)
         Me.cboEditCourse.Name = "cboEditCourse"

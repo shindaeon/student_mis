@@ -4,7 +4,7 @@ Public Class frmMain
     Private mRow As Integer = 0
     Private newPage As Boolean = True
 
-    Private Sub loadData()
+    Public Sub loadData()
         Dim dt As New DataTable
         DBConnect()
         cmd.CommandType = CommandType.Text
@@ -26,13 +26,11 @@ Public Class frmMain
         cmd.Dispose()
         da.Dispose()
         DBClose()
-
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmd.Dispose()
         DBClose()
-
         loadData()
         frmEdit.addCombo()
     End Sub
@@ -121,6 +119,31 @@ Public Class frmMain
         frmEdit.txtEditName.Text = DataGridView1.Item("Column2", DataGridView1.CurrentRow.Index).Value
         frmEdit.cboEditCollege.Text = DataGridView1.Item("Column3", DataGridView1.CurrentRow.Index).Value
         frmEdit.cboEditCourse.Text = DataGridView1.Item("Column4", DataGridView1.CurrentRow.Index).Value
+    End Sub
 
+    Private Sub cmdDelete_Click(sender As Object, e As EventArgs) Handles cmdDelete.Click
+        Dim answer As Integer
+        answer = MsgBox("Do you want to Delete the Record of: " & vbCrLf &
+                        vbTab & frmEdit.txtEditID.Text & vbCrLf &
+                        vbTab & frmEdit.txtEditName.Text & vbCrLf &
+                        vbTab & frmEdit.cboEditCollege.Text & vbCrLf &
+                        vbTab & frmEdit.cboEditCourse.Text, vbQuestion + vbYesNo + vbDefaultButton2, "Delete Record")
+        Try
+            If answer = vbYes Then
+                DBConnect()
+                cmd.CommandType = CommandType.Text
+                cmd.Connection = conn
+                cmd.CommandText = "DELETE FROM tblstudent WHERE student_id = '" & frmEdit.txtEditID.Text.ToString & "';"
+                cmd.ExecuteNonQuery()
+                cmd.Dispose()
+                DBClose()
+                MessageBox.Show("Successfully Deleted Record", "Delete Student", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Cancelled", "Cancelled Delete Student", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+        loadData()
     End Sub
 End Class

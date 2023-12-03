@@ -24,6 +24,10 @@ Partial Class frmMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdAdd = New System.Windows.Forms.Button()
         Me.cmdEdit = New System.Windows.Forms.Button()
         Me.cmdDelete = New System.Windows.Forms.Button()
@@ -33,10 +37,6 @@ Partial Class frmMain
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.cmdSearch = New System.Windows.Forms.Button()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,6 +51,40 @@ Partial Class frmMain
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(682, 339)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column1.DataPropertyName = "student_id"
+        Me.Column1.HeaderText = "Student ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 95
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column2.DataPropertyName = "name"
+        Me.Column2.HeaderText = "Student Name"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 118
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column3.DataPropertyName = "college"
+        Me.Column3.FillWeight = 150.0!
+        Me.Column3.HeaderText = "College"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 81
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column4.DataPropertyName = "course"
+        Me.Column4.FillWeight = 150.0!
+        Me.Column4.HeaderText = "Course"
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 77
         '
         'cmdAdd
         '
@@ -130,40 +164,6 @@ Partial Class frmMain
         Me.cmdSearch.TabIndex = 7
         Me.cmdSearch.Text = "Search"
         Me.cmdSearch.UseVisualStyleBackColor = True
-        '
-        'Column1
-        '
-        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Column1.DataPropertyName = "student_id"
-        Me.Column1.HeaderText = "Student ID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 95
-        '
-        'Column2
-        '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Column2.DataPropertyName = "name"
-        Me.Column2.HeaderText = "Student Name"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 118
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Column3.DataPropertyName = "college"
-        Me.Column3.FillWeight = 150.0!
-        Me.Column3.HeaderText = "College"
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 81
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Column4.DataPropertyName = "course"
-        Me.Column4.FillWeight = 150.0!
-        Me.Column4.HeaderText = "Course"
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 77
         '
         'frmMain
         '
