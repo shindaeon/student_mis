@@ -38,4 +38,5 @@
     Private Sub cmdCancel_Click(sender As Object, e As EventArgs) Handles cmdCancel.Click
         End
     End Sub
+
 End Class

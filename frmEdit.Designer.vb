@@ -32,11 +32,19 @@ Partial Class frmEdit
         Me.lbID = New System.Windows.Forms.Label()
         Me.cboEditCollege = New System.Windows.Forms.ComboBox()
         Me.cboEditCourse = New System.Windows.Forms.ComboBox()
+        Me.txtEditAddress = New System.Windows.Forms.TextBox()
+        Me.txtEditPhone = New System.Windows.Forms.TextBox()
+        Me.cboEditGender = New System.Windows.Forms.ComboBox()
+        Me.txtEditAge = New System.Windows.Forms.TextBox()
+        Me.lblGender = New System.Windows.Forms.Label()
+        Me.lblAddress = New System.Windows.Forms.Label()
+        Me.lblPhone = New System.Windows.Forms.Label()
+        Me.lblAge = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'cmdCancel
         '
-        Me.cmdCancel.Location = New System.Drawing.Point(322, 192)
+        Me.cmdCancel.Location = New System.Drawing.Point(336, 324)
         Me.cmdCancel.Name = "cmdCancel"
         Me.cmdCancel.Size = New System.Drawing.Size(75, 34)
         Me.cmdCancel.TabIndex = 19
@@ -45,7 +53,7 @@ Partial Class frmEdit
         '
         'cmdUpdate
         '
-        Me.cmdUpdate.Location = New System.Drawing.Point(241, 192)
+        Me.cmdUpdate.Location = New System.Drawing.Point(255, 324)
         Me.cmdUpdate.Name = "cmdUpdate"
         Me.cmdUpdate.Size = New System.Drawing.Size(75, 34)
         Me.cmdUpdate.TabIndex = 18
@@ -54,14 +62,14 @@ Partial Class frmEdit
         '
         'txtEditName
         '
-        Me.txtEditName.Location = New System.Drawing.Point(105, 67)
+        Me.txtEditName.Location = New System.Drawing.Point(118, 64)
         Me.txtEditName.Name = "txtEditName"
         Me.txtEditName.Size = New System.Drawing.Size(292, 26)
         Me.txtEditName.TabIndex = 17
         '
         'txtEditID
         '
-        Me.txtEditID.Location = New System.Drawing.Point(104, 31)
+        Me.txtEditID.Location = New System.Drawing.Point(117, 28)
         Me.txtEditID.Name = "txtEditID"
         Me.txtEditID.Size = New System.Drawing.Size(293, 26)
         Me.txtEditID.TabIndex = 16
@@ -69,7 +77,7 @@ Partial Class frmEdit
         'lbCourse
         '
         Me.lbCourse.AutoSize = True
-        Me.lbCourse.Location = New System.Drawing.Point(42, 135)
+        Me.lbCourse.Location = New System.Drawing.Point(56, 267)
         Me.lbCourse.Name = "lbCourse"
         Me.lbCourse.Size = New System.Drawing.Size(56, 20)
         Me.lbCourse.TabIndex = 13
@@ -78,7 +86,7 @@ Partial Class frmEdit
         'lbCollege
         '
         Me.lbCollege.AutoSize = True
-        Me.lbCollege.Location = New System.Drawing.Point(38, 103)
+        Me.lbCollege.Location = New System.Drawing.Point(52, 235)
         Me.lbCollege.Name = "lbCollege"
         Me.lbCollege.Size = New System.Drawing.Size(60, 20)
         Me.lbCollege.TabIndex = 12
@@ -87,7 +95,7 @@ Partial Class frmEdit
         'lbName
         '
         Me.lbName.AutoSize = True
-        Me.lbName.Location = New System.Drawing.Point(51, 70)
+        Me.lbName.Location = New System.Drawing.Point(64, 67)
         Me.lbName.Name = "lbName"
         Me.lbName.Size = New System.Drawing.Size(48, 20)
         Me.lbName.TabIndex = 11
@@ -96,7 +104,7 @@ Partial Class frmEdit
         'lbID
         '
         Me.lbID.AutoSize = True
-        Me.lbID.Location = New System.Drawing.Point(24, 34)
+        Me.lbID.Location = New System.Drawing.Point(37, 31)
         Me.lbID.Name = "lbID"
         Me.lbID.Size = New System.Drawing.Size(74, 20)
         Me.lbID.TabIndex = 10
@@ -106,7 +114,7 @@ Partial Class frmEdit
         '
         Me.cboEditCollege.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEditCollege.FormattingEnabled = True
-        Me.cboEditCollege.Location = New System.Drawing.Point(104, 101)
+        Me.cboEditCollege.Location = New System.Drawing.Point(118, 233)
         Me.cboEditCollege.Name = "cboEditCollege"
         Me.cboEditCollege.Size = New System.Drawing.Size(293, 28)
         Me.cboEditCollege.TabIndex = 20
@@ -115,16 +123,90 @@ Partial Class frmEdit
         '
         Me.cboEditCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEditCourse.FormattingEnabled = True
-        Me.cboEditCourse.Location = New System.Drawing.Point(104, 132)
+        Me.cboEditCourse.Location = New System.Drawing.Point(118, 264)
         Me.cboEditCourse.Name = "cboEditCourse"
         Me.cboEditCourse.Size = New System.Drawing.Size(293, 28)
         Me.cboEditCourse.TabIndex = 21
+        '
+        'txtEditAddress
+        '
+        Me.txtEditAddress.Location = New System.Drawing.Point(116, 177)
+        Me.txtEditAddress.Multiline = True
+        Me.txtEditAddress.Name = "txtEditAddress"
+        Me.txtEditAddress.Size = New System.Drawing.Size(291, 50)
+        Me.txtEditAddress.TabIndex = 29
+        '
+        'txtEditPhone
+        '
+        Me.txtEditPhone.Location = New System.Drawing.Point(117, 143)
+        Me.txtEditPhone.Name = "txtEditPhone"
+        Me.txtEditPhone.Size = New System.Drawing.Size(292, 26)
+        Me.txtEditPhone.TabIndex = 28
+        '
+        'cboEditGender
+        '
+        Me.cboEditGender.FormattingEnabled = True
+        Me.cboEditGender.Location = New System.Drawing.Point(331, 99)
+        Me.cboEditGender.Name = "cboEditGender"
+        Me.cboEditGender.Size = New System.Drawing.Size(78, 28)
+        Me.cboEditGender.TabIndex = 27
+        '
+        'txtEditAge
+        '
+        Me.txtEditAge.Location = New System.Drawing.Point(116, 99)
+        Me.txtEditAge.Name = "txtEditAge"
+        Me.txtEditAge.Size = New System.Drawing.Size(132, 26)
+        Me.txtEditAge.TabIndex = 26
+        '
+        'lblGender
+        '
+        Me.lblGender.AutoSize = True
+        Me.lblGender.Location = New System.Drawing.Point(266, 105)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(58, 20)
+        Me.lblGender.TabIndex = 25
+        Me.lblGender.Text = "Gender:"
+        '
+        'lblAddress
+        '
+        Me.lblAddress.AutoSize = True
+        Me.lblAddress.Location = New System.Drawing.Point(47, 180)
+        Me.lblAddress.Name = "lblAddress"
+        Me.lblAddress.Size = New System.Drawing.Size(64, 20)
+        Me.lblAddress.TabIndex = 24
+        Me.lblAddress.Text = "Address:"
+        '
+        'lblPhone
+        '
+        Me.lblPhone.AutoSize = True
+        Me.lblPhone.Location = New System.Drawing.Point(7, 143)
+        Me.lblPhone.Name = "lblPhone"
+        Me.lblPhone.Size = New System.Drawing.Size(103, 20)
+        Me.lblPhone.TabIndex = 23
+        Me.lblPhone.Text = "Phone Number:"
+        '
+        'lblAge
+        '
+        Me.lblAge.AutoSize = True
+        Me.lblAge.Location = New System.Drawing.Point(72, 105)
+        Me.lblAge.Name = "lblAge"
+        Me.lblAge.Size = New System.Drawing.Size(38, 20)
+        Me.lblAge.TabIndex = 22
+        Me.lblAge.Text = "Age:"
         '
         'frmEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(414, 243)
+        Me.ClientSize = New System.Drawing.Size(425, 376)
+        Me.Controls.Add(Me.txtEditAddress)
+        Me.Controls.Add(Me.txtEditPhone)
+        Me.Controls.Add(Me.cboEditGender)
+        Me.Controls.Add(Me.txtEditAge)
+        Me.Controls.Add(Me.lblGender)
+        Me.Controls.Add(Me.lblAddress)
+        Me.Controls.Add(Me.lblPhone)
+        Me.Controls.Add(Me.lblAge)
         Me.Controls.Add(Me.cboEditCourse)
         Me.Controls.Add(Me.cboEditCollege)
         Me.Controls.Add(Me.cmdCancel)
@@ -156,4 +238,12 @@ Partial Class frmEdit
     Friend WithEvents lbID As Label
     Friend WithEvents cboEditCollege As ComboBox
     Friend WithEvents cboEditCourse As ComboBox
+    Friend WithEvents txtEditAddress As TextBox
+    Friend WithEvents txtEditPhone As TextBox
+    Friend WithEvents cboEditGender As ComboBox
+    Friend WithEvents txtEditAge As TextBox
+    Friend WithEvents lblGender As Label
+    Friend WithEvents lblAddress As Label
+    Friend WithEvents lblPhone As Label
+    Friend WithEvents lblAge As Label
 End Class

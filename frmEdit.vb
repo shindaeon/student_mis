@@ -8,6 +8,10 @@
         cboEditCourse.Items.Add("Bachelor of Science in Information Technology")
         cboEditCourse.Items.Add("Bachelor of Science in Computer Science")
 
+        'add item for gender
+        cboEditGender.Items.Add("Male")
+        cboEditGender.Items.Add("Female")
+
     End Sub
 
     Private Sub cmdUpdate_Click(sender As Object, e As EventArgs) Handles cmdUpdate.Click
@@ -15,7 +19,7 @@
             DBConnect()
             cmd.CommandType = CommandType.Text
             cmd.Connection = conn
-            cmd.CommandText = "UPDATE tblstudent SET student_id = '" & txtEditID.Text.ToString & "', name = '" & txtEditName.Text.ToString & "', college = '" & cboEditCollege.Text.ToString & "', course = '" & cboEditCourse.Text.ToString & "' WHERE student_id = '" & txtEditID.Text.ToString & "';"
+            cmd.CommandText = "UPDATE tblstudent SET student_id = '" & txtEditID.Text.ToString & "', name = '" & txtEditName.Text.ToString & "', college = '" & cboEditCollege.Text.ToString & "', course = '" & cboEditCourse.Text.ToString & "', age = '" & txtEditAge.Text.ToString & "', gender = '" & cboEditGender.Text.ToString & "', phone_number = '" & txtEditPhone.Text.ToString & "', address = '" & txtEditAddress.Text.ToString & "' WHERE student_id = '" & txtEditID.Text.ToString & "';"
             cmd.ExecuteNonQuery()
             cmd.Dispose()
             DBClose()
@@ -25,5 +29,9 @@
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
+    End Sub
+
+    Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class
