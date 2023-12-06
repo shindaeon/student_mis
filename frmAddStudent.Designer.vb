@@ -100,6 +100,7 @@ Partial Class frmAddStudent
         'txtID
         '
         Me.txtID.Location = New System.Drawing.Point(135, 41)
+        Me.txtID.MaxLength = 9
         Me.txtID.Name = "txtID"
         Me.txtID.Size = New System.Drawing.Size(293, 26)
         Me.txtID.TabIndex = 6
@@ -168,12 +169,14 @@ Partial Class frmAddStudent
         'txtAge
         '
         Me.txtAge.Location = New System.Drawing.Point(135, 109)
+        Me.txtAge.MaxLength = 3
         Me.txtAge.Name = "txtAge"
         Me.txtAge.Size = New System.Drawing.Size(132, 26)
         Me.txtAge.TabIndex = 14
         '
         'cboGender
         '
+        Me.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboGender.FormattingEnabled = True
         Me.cboGender.Location = New System.Drawing.Point(350, 109)
         Me.cboGender.Name = "cboGender"
@@ -183,6 +186,7 @@ Partial Class frmAddStudent
         'txtPhone
         '
         Me.txtPhone.Location = New System.Drawing.Point(136, 153)
+        Me.txtPhone.MaxLength = 11
         Me.txtPhone.Name = "txtPhone"
         Me.txtPhone.Size = New System.Drawing.Size(292, 26)
         Me.txtPhone.TabIndex = 16

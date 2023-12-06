@@ -47,7 +47,10 @@
         MessageBox.Show("Successfully Added to Database", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Me.Hide()
         Me.Dispose()
-
     End Sub
 
+    Private Sub cmdCancel_Click(sender As Object, e As EventArgs) Handles cmdCancel.Click
+        Me.Hide()
+        Me.Dispose()
+    End Sub
 End Class

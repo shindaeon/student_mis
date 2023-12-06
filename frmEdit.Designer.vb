@@ -70,6 +70,7 @@ Partial Class frmEdit
         'txtEditID
         '
         Me.txtEditID.Location = New System.Drawing.Point(117, 28)
+        Me.txtEditID.MaxLength = 9
         Me.txtEditID.Name = "txtEditID"
         Me.txtEditID.Size = New System.Drawing.Size(293, 26)
         Me.txtEditID.TabIndex = 16
@@ -139,12 +140,14 @@ Partial Class frmEdit
         'txtEditPhone
         '
         Me.txtEditPhone.Location = New System.Drawing.Point(117, 143)
+        Me.txtEditPhone.MaxLength = 11
         Me.txtEditPhone.Name = "txtEditPhone"
         Me.txtEditPhone.Size = New System.Drawing.Size(292, 26)
         Me.txtEditPhone.TabIndex = 28
         '
         'cboEditGender
         '
+        Me.cboEditGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboEditGender.FormattingEnabled = True
         Me.cboEditGender.Location = New System.Drawing.Point(331, 99)
         Me.cboEditGender.Name = "cboEditGender"
@@ -154,6 +157,7 @@ Partial Class frmEdit
         'txtEditAge
         '
         Me.txtEditAge.Location = New System.Drawing.Point(116, 99)
+        Me.txtEditAge.MaxLength = 3
         Me.txtEditAge.Name = "txtEditAge"
         Me.txtEditAge.Size = New System.Drawing.Size(132, 26)
         Me.txtEditAge.TabIndex = 26
@@ -222,6 +226,8 @@ Partial Class frmEdit
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmEdit"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Edit"
         Me.ResumeLayout(False)
         Me.PerformLayout()
