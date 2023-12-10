@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Public Class frmMain
     Dim da As New MySqlDataAdapter
 
@@ -73,6 +74,15 @@ Public Class frmMain
         DBClose()
     End Sub
 
+    Public Sub printInvoice()
+        Try
+            Dim report As New Invoice_report
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmd.Dispose()
         DBClose()
@@ -90,18 +100,7 @@ Public Class frmMain
     End Sub
 
     Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintDocument1.DefaultPageSettings.PaperSize = New System.Drawing.Printing.PaperSize("Letter (Landscape 150Dpi)", 1648, 1276)
-        PrintPreviewDialog1.WindowState = FormWindowState.Maximized
-        PrintPreviewDialog1.PrintPreviewControl.Zoom = 0.75
-        PrintPreviewDialog1.ShowDialog()
-    End Sub
 
-    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        Dim imagebmp As New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
-        e.Graphics.DrawString("List Of Students", New Font("Arial", 20, FontStyle.Bold), Brushes.Black, New Point(721, 20))
-        DataGridView1.DrawToBitmap(imagebmp, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
-        e.Graphics.DrawImage(imagebmp, 20, 70)
     End Sub
 
     Private Sub cmdEdit_Click(sender As Object, e As EventArgs) Handles cmdEdit.Click
