@@ -19,10 +19,11 @@
             DBConnect()
             cmd.CommandType = CommandType.Text
             cmd.Connection = conn
-            cmd.CommandText = "UPDATE tblstudent SET student_id = '" & txtEditID.Text.ToString & "', name = '" & txtEditName.Text.ToString & "', college = '" & cboEditCollege.Text.ToString & "', course = '" & cboEditCourse.Text.ToString & "', age = '" & txtEditAge.Text.ToString & "', gender = '" & cboEditGender.Text.ToString & "', phone_number = '" & txtEditPhone.Text.ToString & "', address = '" & txtEditAddress.Text.ToString & "' WHERE student_id = '" & txtEditID.Text.ToString & "';"
+            cmd.CommandText = "UPDATE tblstudent SET student_id = '" & txtEditID.Text.ToString & "', name = '" & txtEditName.Text.ToString & "', college = '" & cboEditCollege.Text.ToString & "', course = '" & cboEditCourse.Text.ToString & "', age = '" & txtEditAge.Text.ToString & "', gender = '" & cboEditGender.Text.ToString & "', phone_number = '" & txtEditPhone.Text.ToString & "', address = '" & txtEditAddress.Text.ToString & "' WHERE id = '" & frmMain.DataGridView1.Item("Column9", frmMain.DataGridView1.CurrentRow.Index).Value & "';"
             cmd.ExecuteNonQuery()
             cmd.Dispose()
             DBClose()
+
             MessageBox.Show("Successfully Updated Record", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Hide()
             frmMain.loadData()

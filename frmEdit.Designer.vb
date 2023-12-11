@@ -25,7 +25,6 @@ Partial Class frmEdit
         Me.cmdCancel = New System.Windows.Forms.Button()
         Me.cmdUpdate = New System.Windows.Forms.Button()
         Me.txtEditName = New System.Windows.Forms.TextBox()
-        Me.txtEditID = New System.Windows.Forms.TextBox()
         Me.lbCourse = New System.Windows.Forms.Label()
         Me.lbCollege = New System.Windows.Forms.Label()
         Me.lbName = New System.Windows.Forms.Label()
@@ -40,6 +39,7 @@ Partial Class frmEdit
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.lblAge = New System.Windows.Forms.Label()
+        Me.txtEditID = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'cmdCancel
@@ -66,14 +66,6 @@ Partial Class frmEdit
         Me.txtEditName.Name = "txtEditName"
         Me.txtEditName.Size = New System.Drawing.Size(292, 26)
         Me.txtEditName.TabIndex = 17
-        '
-        'txtEditID
-        '
-        Me.txtEditID.Location = New System.Drawing.Point(117, 28)
-        Me.txtEditID.MaxLength = 9
-        Me.txtEditID.Name = "txtEditID"
-        Me.txtEditID.Size = New System.Drawing.Size(293, 26)
-        Me.txtEditID.TabIndex = 16
         '
         'lbCourse
         '
@@ -198,11 +190,20 @@ Partial Class frmEdit
         Me.lblAge.TabIndex = 22
         Me.lblAge.Text = "Age:"
         '
+        'txtEditID
+        '
+        Me.txtEditID.Location = New System.Drawing.Point(118, 31)
+        Me.txtEditID.MaxLength = 16
+        Me.txtEditID.Name = "txtEditID"
+        Me.txtEditID.Size = New System.Drawing.Size(289, 26)
+        Me.txtEditID.TabIndex = 30
+        '
         'frmEdit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(425, 376)
+        Me.Controls.Add(Me.txtEditID)
         Me.Controls.Add(Me.txtEditAddress)
         Me.Controls.Add(Me.txtEditPhone)
         Me.Controls.Add(Me.cboEditGender)
@@ -216,7 +217,6 @@ Partial Class frmEdit
         Me.Controls.Add(Me.cmdCancel)
         Me.Controls.Add(Me.cmdUpdate)
         Me.Controls.Add(Me.txtEditName)
-        Me.Controls.Add(Me.txtEditID)
         Me.Controls.Add(Me.lbCourse)
         Me.Controls.Add(Me.lbCollege)
         Me.Controls.Add(Me.lbName)
@@ -237,7 +237,6 @@ Partial Class frmEdit
     Friend WithEvents cmdCancel As Button
     Friend WithEvents cmdUpdate As Button
     Friend WithEvents txtEditName As TextBox
-    Friend WithEvents txtEditID As TextBox
     Friend WithEvents lbCourse As Label
     Friend WithEvents lbCollege As Label
     Friend WithEvents lbName As Label
@@ -252,4 +251,5 @@ Partial Class frmEdit
     Friend WithEvents lblAddress As Label
     Friend WithEvents lblPhone As Label
     Friend WithEvents lblAge As Label
+    Friend WithEvents txtEditID As TextBox
 End Class

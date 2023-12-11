@@ -67,7 +67,7 @@ Partial Class frmPrint
         Me.Name = "frmPrint"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmPrint"
+        Me.Text = "Print"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

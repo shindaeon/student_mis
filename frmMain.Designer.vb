@@ -38,13 +38,14 @@ Partial Class frmMain
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cmdAdd
         '
         Me.cmdAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdAdd.Location = New System.Drawing.Point(462, 436)
+        Me.cmdAdd.Location = New System.Drawing.Point(526, 436)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(75, 33)
         Me.cmdAdd.TabIndex = 1
@@ -54,7 +55,7 @@ Partial Class frmMain
         'cmdEdit
         '
         Me.cmdEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdEdit.Location = New System.Drawing.Point(543, 435)
+        Me.cmdEdit.Location = New System.Drawing.Point(607, 435)
         Me.cmdEdit.Name = "cmdEdit"
         Me.cmdEdit.Size = New System.Drawing.Size(75, 32)
         Me.cmdEdit.TabIndex = 2
@@ -64,7 +65,7 @@ Partial Class frmMain
         'cmdDelete
         '
         Me.cmdDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdDelete.Location = New System.Drawing.Point(624, 435)
+        Me.cmdDelete.Location = New System.Drawing.Point(688, 435)
         Me.cmdDelete.Name = "cmdDelete"
         Me.cmdDelete.Size = New System.Drawing.Size(75, 32)
         Me.cmdDelete.TabIndex = 3
@@ -74,7 +75,7 @@ Partial Class frmMain
         'cmdExit
         '
         Me.cmdExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdExit.Location = New System.Drawing.Point(705, 436)
+        Me.cmdExit.Location = New System.Drawing.Point(769, 436)
         Me.cmdExit.Name = "cmdExit"
         Me.cmdExit.Size = New System.Drawing.Size(75, 31)
         Me.cmdExit.TabIndex = 4
@@ -84,7 +85,7 @@ Partial Class frmMain
         'cmdPrint
         '
         Me.cmdPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdPrint.Location = New System.Drawing.Point(381, 436)
+        Me.cmdPrint.Location = New System.Drawing.Point(445, 436)
         Me.cmdPrint.Name = "cmdPrint"
         Me.cmdPrint.Size = New System.Drawing.Size(75, 33)
         Me.cmdPrint.TabIndex = 5
@@ -115,12 +116,12 @@ Partial Class frmMain
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
         Me.DataGridView1.Location = New System.Drawing.Point(12, 43)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(766, 386)
+        Me.DataGridView1.Size = New System.Drawing.Size(830, 386)
         Me.DataGridView1.TabIndex = 8
         '
         'Column1
@@ -132,10 +133,12 @@ Partial Class frmMain
         '
         'Column2
         '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         Me.Column2.DataPropertyName = "name"
         Me.Column2.HeaderText = "Name"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
+        Me.Column2.Width = 69
         '
         'Column3
         '
@@ -167,23 +170,35 @@ Partial Class frmMain
         '
         'Column7
         '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         Me.Column7.DataPropertyName = "college"
         Me.Column7.HeaderText = "College"
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
+        Me.Column7.Width = 81
         '
         'Column8
         '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
         Me.Column8.DataPropertyName = "course"
         Me.Column8.HeaderText = "Course"
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
+        Me.Column8.Width = 77
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "id"
+        Me.Column9.HeaderText = "id"
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Visible = False
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 476)
+        Me.ClientSize = New System.Drawing.Size(854, 476)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.cmdSearch)
         Me.Controls.Add(Me.txtSearch)
@@ -218,4 +233,5 @@ Partial Class frmMain
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class

@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports Microsoft.Reporting.WinForms
 Public Class frmMain
     Dim da As New MySqlDataAdapter
 
@@ -18,11 +17,12 @@ Public Class frmMain
         DataGridView1.DataSource = dt
         DataGridView1.Refresh()
 
-        'hide the id of the student to the screen
-        DataGridView1.Columns.Item(0).Visible = False
-
         If DataGridView1.Rows.Count = 0 Then
             cmdDelete.Enabled = False
+            cmdPrint.Enabled = False
+        Else
+            cmdDelete.Enabled = True
+            cmdPrint.Enabled = True
         End If
 
         cmd.Parameters.Clear()
