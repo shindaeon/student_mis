@@ -31,11 +31,8 @@
         End Try
     End Sub
 
-    Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub cmdCancel_Click(sender As Object, e As EventArgs) Handles cmdCancel.Click
         Me.Close()
     End Sub
+
 End Class

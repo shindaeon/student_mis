@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-
+Imports Microsoft.Reporting.WinForms
 Public Class frmMain
     Dim da As New MySqlDataAdapter
 
@@ -74,15 +74,6 @@ Public Class frmMain
         DBClose()
     End Sub
 
-    Public Sub printInvoice()
-        Try
-            Dim report As New Invoice_report
-
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cmd.Dispose()
         DBClose()
@@ -100,7 +91,8 @@ Public Class frmMain
     End Sub
 
     Private Sub cmdPrint_Click(sender As Object, e As EventArgs) Handles cmdPrint.Click
-
+        frmPrint.ShowDialog()
+        frmPrint.ReportViewer1.RefreshReport()
     End Sub
 
     Private Sub cmdEdit_Click(sender As Object, e As EventArgs) Handles cmdEdit.Click
