@@ -41,6 +41,7 @@ Partial Class Form1
         '
         'tbUsername
         '
+        Me.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbUsername.Location = New System.Drawing.Point(186, 43)
         Me.tbUsername.Name = "tbUsername"
         Me.tbUsername.Size = New System.Drawing.Size(185, 29)
@@ -57,10 +58,13 @@ Partial Class Form1
         '
         'tbPassword
         '
+        Me.tbPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tbPassword.Location = New System.Drawing.Point(186, 89)
         Me.tbPassword.Name = "tbPassword"
         Me.tbPassword.Size = New System.Drawing.Size(185, 29)
         Me.tbPassword.TabIndex = 3
+        Me.tbPassword.UseSystemPasswordChar = True
         '
         'cmdLogIn
         '

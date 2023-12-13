@@ -51,10 +51,10 @@ Public Class frmMain
         DBConnect()
         cmd.CommandType = CommandType.Text
         cmd.CommandText = "SELECT * FROM tblstudent WHERE student_id LIKE '%" &
-            txtSearch.Text & "%' OR name LIKE '%" & txtSearch.Text & "%' OR age LIKE '%" &
-            txtSearch.Text & "%' OR gender LIKE '%" & txtSearch.Text & "%' OR phone_number LIKE '%" &
-            txtSearch.Text & "%' OR address LIKE '%" & txtSearch.Text & "%' OR college LIKE '%" &
-            txtSearch.Text & "%' OR course LIKE '%" & txtSearch.Text & "%';"
+            txtSearch.Text.Trim & "%' OR name LIKE '%" & txtSearch.Text.Trim & "%' OR age LIKE '%" &
+            txtSearch.Text.Trim & "%' OR gender LIKE '%" & txtSearch.Text.Trim & "%' OR phone_number LIKE '%" &
+            txtSearch.Text.Trim & "%' OR address LIKE '%" & txtSearch.Text.Trim & "%' OR college LIKE '%" &
+            txtSearch.Text.Trim & "%' OR course LIKE '%" & txtSearch.Text.Trim & "%';"
         cmd.ExecuteNonQuery()
 
         da = New MySqlDataAdapter(cmd)

@@ -19,7 +19,7 @@
             DBConnect()
             cmd.CommandType = CommandType.Text
             cmd.Connection = conn
-            cmd.CommandText = "UPDATE tblstudent SET student_id = '" & txtEditID.Text.ToString & "', name = '" & txtEditName.Text.ToString & "', college = '" & cboEditCollege.Text.ToString & "', course = '" & cboEditCourse.Text.ToString & "', age = '" & txtEditAge.Text.ToString & "', gender = '" & cboEditGender.Text.ToString & "', phone_number = '" & txtEditPhone.Text.ToString & "', address = '" & txtEditAddress.Text.ToString & "' WHERE id = '" & frmMain.DataGridView1.Item("Column9", frmMain.DataGridView1.CurrentRow.Index).Value & "';"
+            cmd.CommandText = "UPDATE tblstudent SET student_id = '" & txtEditID.Text.ToString.Trim & "', name = '" & txtEditName.Text.ToString.Trim & "', college = '" & cboEditCollege.Text.ToString & "', course = '" & cboEditCourse.Text.ToString & "', age = '" & txtEditAge.Text.ToString.Trim & "', gender = '" & cboEditGender.Text.ToString & "', phone_number = '" & txtEditPhone.Text.ToString.Trim & "', address = '" & txtEditAddress.Text.ToString.Trim & "' WHERE id = '" & frmMain.DataGridView1.Item("Column9", frmMain.DataGridView1.CurrentRow.Index).Value & "';"
             cmd.ExecuteNonQuery()
             cmd.Dispose()
             DBClose()

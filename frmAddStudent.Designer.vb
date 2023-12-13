@@ -99,6 +99,7 @@ Partial Class frmAddStudent
         '
         'txtID
         '
+        Me.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtID.Location = New System.Drawing.Point(135, 41)
         Me.txtID.MaxLength = 9
         Me.txtID.Name = "txtID"
@@ -107,6 +108,7 @@ Partial Class frmAddStudent
         '
         'txtName
         '
+        Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtName.Location = New System.Drawing.Point(136, 77)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(292, 26)
@@ -168,6 +170,7 @@ Partial Class frmAddStudent
         '
         'txtAge
         '
+        Me.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAge.Location = New System.Drawing.Point(135, 109)
         Me.txtAge.MaxLength = 3
         Me.txtAge.Name = "txtAge"
@@ -185,6 +188,7 @@ Partial Class frmAddStudent
         '
         'txtPhone
         '
+        Me.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtPhone.Location = New System.Drawing.Point(136, 153)
         Me.txtPhone.MaxLength = 11
         Me.txtPhone.Name = "txtPhone"
@@ -193,6 +197,7 @@ Partial Class frmAddStudent
         '
         'txtAddress
         '
+        Me.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAddress.Location = New System.Drawing.Point(135, 187)
         Me.txtAddress.Multiline = True
         Me.txtAddress.Name = "txtAddress"
@@ -201,8 +206,10 @@ Partial Class frmAddStudent
         '
         'frmAddStudent
         '
+        Me.AcceptButton = Me.cmdSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.cmdCancel
         Me.ClientSize = New System.Drawing.Size(466, 367)
         Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.txtPhone)

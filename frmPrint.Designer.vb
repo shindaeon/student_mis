@@ -37,6 +37,7 @@ Partial Class frmPrint
         '
         'txtFilter
         '
+        Me.txtFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFilter.Location = New System.Drawing.Point(13, 12)
         Me.txtFilter.Name = "txtFilter"
         Me.txtFilter.Size = New System.Drawing.Size(273, 29)
@@ -47,13 +48,14 @@ Partial Class frmPrint
         Me.cmdFilter.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdFilter.Location = New System.Drawing.Point(293, 13)
         Me.cmdFilter.Name = "cmdFilter"
-        Me.cmdFilter.Size = New System.Drawing.Size(100, 28)
+        Me.cmdFilter.Size = New System.Drawing.Size(81, 28)
         Me.cmdFilter.TabIndex = 2
         Me.cmdFilter.Text = "Filter"
         Me.cmdFilter.UseVisualStyleBackColor = True
         '
         'frmPrint
         '
+        Me.AcceptButton = Me.cmdFilter
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(749, 485)
@@ -67,7 +69,6 @@ Partial Class frmPrint
         Me.Name = "frmPrint"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Print"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

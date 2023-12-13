@@ -62,6 +62,7 @@ Partial Class frmEdit
         '
         'txtEditName
         '
+        Me.txtEditName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEditName.Location = New System.Drawing.Point(118, 64)
         Me.txtEditName.Name = "txtEditName"
         Me.txtEditName.Size = New System.Drawing.Size(292, 26)
@@ -123,6 +124,7 @@ Partial Class frmEdit
         '
         'txtEditAddress
         '
+        Me.txtEditAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEditAddress.Location = New System.Drawing.Point(116, 177)
         Me.txtEditAddress.Multiline = True
         Me.txtEditAddress.Name = "txtEditAddress"
@@ -131,6 +133,7 @@ Partial Class frmEdit
         '
         'txtEditPhone
         '
+        Me.txtEditPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEditPhone.Location = New System.Drawing.Point(117, 143)
         Me.txtEditPhone.MaxLength = 11
         Me.txtEditPhone.Name = "txtEditPhone"
@@ -148,6 +151,7 @@ Partial Class frmEdit
         '
         'txtEditAge
         '
+        Me.txtEditAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEditAge.Location = New System.Drawing.Point(116, 99)
         Me.txtEditAge.MaxLength = 3
         Me.txtEditAge.Name = "txtEditAge"
@@ -192,6 +196,7 @@ Partial Class frmEdit
         '
         'txtEditID
         '
+        Me.txtEditID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtEditID.Location = New System.Drawing.Point(118, 31)
         Me.txtEditID.MaxLength = 16
         Me.txtEditID.Name = "txtEditID"
@@ -200,8 +205,10 @@ Partial Class frmEdit
         '
         'frmEdit
         '
+        Me.AcceptButton = Me.cmdUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.cmdCancel
         Me.ClientSize = New System.Drawing.Size(425, 376)
         Me.Controls.Add(Me.txtEditID)
         Me.Controls.Add(Me.txtEditAddress)

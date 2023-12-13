@@ -45,9 +45,9 @@ Partial Class frmMain
         'cmdAdd
         '
         Me.cmdAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdAdd.Location = New System.Drawing.Point(526, 436)
+        Me.cmdAdd.Location = New System.Drawing.Point(526, 476)
         Me.cmdAdd.Name = "cmdAdd"
-        Me.cmdAdd.Size = New System.Drawing.Size(75, 33)
+        Me.cmdAdd.Size = New System.Drawing.Size(75, 31)
         Me.cmdAdd.TabIndex = 1
         Me.cmdAdd.Text = "Add"
         Me.cmdAdd.UseVisualStyleBackColor = True
@@ -55,9 +55,10 @@ Partial Class frmMain
         'cmdEdit
         '
         Me.cmdEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdEdit.Location = New System.Drawing.Point(607, 435)
+        Me.cmdEdit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.cmdEdit.Location = New System.Drawing.Point(607, 475)
         Me.cmdEdit.Name = "cmdEdit"
-        Me.cmdEdit.Size = New System.Drawing.Size(75, 32)
+        Me.cmdEdit.Size = New System.Drawing.Size(75, 30)
         Me.cmdEdit.TabIndex = 2
         Me.cmdEdit.Text = "Edit"
         Me.cmdEdit.UseVisualStyleBackColor = True
@@ -65,9 +66,9 @@ Partial Class frmMain
         'cmdDelete
         '
         Me.cmdDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdDelete.Location = New System.Drawing.Point(688, 435)
+        Me.cmdDelete.Location = New System.Drawing.Point(688, 475)
         Me.cmdDelete.Name = "cmdDelete"
-        Me.cmdDelete.Size = New System.Drawing.Size(75, 32)
+        Me.cmdDelete.Size = New System.Drawing.Size(75, 30)
         Me.cmdDelete.TabIndex = 3
         Me.cmdDelete.Text = "Delete"
         Me.cmdDelete.UseVisualStyleBackColor = True
@@ -75,9 +76,10 @@ Partial Class frmMain
         'cmdExit
         '
         Me.cmdExit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdExit.Location = New System.Drawing.Point(769, 436)
+        Me.cmdExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.cmdExit.Location = New System.Drawing.Point(769, 476)
         Me.cmdExit.Name = "cmdExit"
-        Me.cmdExit.Size = New System.Drawing.Size(75, 31)
+        Me.cmdExit.Size = New System.Drawing.Size(75, 29)
         Me.cmdExit.TabIndex = 4
         Me.cmdExit.Text = "Exit"
         Me.cmdExit.UseVisualStyleBackColor = True
@@ -85,25 +87,26 @@ Partial Class frmMain
         'cmdPrint
         '
         Me.cmdPrint.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cmdPrint.Location = New System.Drawing.Point(445, 436)
+        Me.cmdPrint.Location = New System.Drawing.Point(445, 476)
         Me.cmdPrint.Name = "cmdPrint"
-        Me.cmdPrint.Size = New System.Drawing.Size(75, 33)
+        Me.cmdPrint.Size = New System.Drawing.Size(75, 31)
         Me.cmdPrint.TabIndex = 5
         Me.cmdPrint.Text = "Print"
         Me.cmdPrint.UseVisualStyleBackColor = True
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(12, 11)
+        Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSearch.Location = New System.Drawing.Point(13, 15)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(243, 26)
         Me.txtSearch.TabIndex = 6
         '
         'cmdSearch
         '
-        Me.cmdSearch.Location = New System.Drawing.Point(261, 12)
+        Me.cmdSearch.Location = New System.Drawing.Point(262, 12)
         Me.cmdSearch.Name = "cmdSearch"
-        Me.cmdSearch.Size = New System.Drawing.Size(75, 25)
+        Me.cmdSearch.Size = New System.Drawing.Size(75, 31)
         Me.cmdSearch.TabIndex = 7
         Me.cmdSearch.Text = "Search"
         Me.cmdSearch.UseVisualStyleBackColor = True
@@ -117,11 +120,11 @@ Partial Class frmMain
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 43)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 54)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(830, 386)
+        Me.DataGridView1.Size = New System.Drawing.Size(830, 416)
         Me.DataGridView1.TabIndex = 8
         '
         'Column1
@@ -133,12 +136,11 @@ Partial Class frmMain
         '
         'Column2
         '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column2.DataPropertyName = "name"
         Me.Column2.HeaderText = "Name"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
-        Me.Column2.Width = 69
         '
         'Column3
         '
@@ -198,7 +200,8 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(854, 476)
+        Me.CancelButton = Me.cmdExit
+        Me.ClientSize = New System.Drawing.Size(854, 517)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.cmdSearch)
         Me.Controls.Add(Me.txtSearch)
