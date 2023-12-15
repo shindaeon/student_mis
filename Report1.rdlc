@@ -45,7 +45,6 @@
                             <TextRun>
                               <Value>Student ID</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -81,7 +80,6 @@
                             <TextRun>
                               <Value>Name</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -117,7 +115,6 @@
                             <TextRun>
                               <Value>Age</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -153,7 +150,6 @@
                             <TextRun>
                               <Value>Gender</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -189,7 +185,6 @@
                             <TextRun>
                               <Value>Phone Number</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -225,7 +220,6 @@
                             <TextRun>
                               <Value>Address</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -261,7 +255,6 @@
                             <TextRun>
                               <Value>College</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -297,7 +290,6 @@
                             <TextRun>
                               <Value>Course</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -606,7 +598,7 @@
     <Height>0.8125in</Height>
     <Style />
   </Body>
-  <Width>11in</Width>
+  <Width>8.41667in</Width>
   <Page>
     <PageHeader>
       <Height>0.58209in</Height>
@@ -635,7 +627,7 @@
           <rd:DefaultName>Textbox7</rd:DefaultName>
           <Top>0.13352in</Top>
           <Height>0.31439in</Height>
-          <Width>8.375in</Width>
+          <Width>3in</Width>
           <Style>
             <Border>
               <Style>None</Style>
